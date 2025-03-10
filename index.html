@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AR Nível do Mar - Beberibe</title>
+</head>
+<body>
+  <!-- Interface principal -->
+  <div id="app-container">
+    <!-- Feed da câmera -->
+    <video id="camera-feed" autoplay playsinline muted></video>
+    
+    <!-- Canvas para AR -->
+    <canvas id="arCanvas"></canvas>
+    
+    <!-- Controles -->
+    <div id="controls">
+      <select id="scenario-select">
+        <option value="0.5">Aumento de 0,5m</option>
+        <option value="1.0">Aumento de 1,0m</option>
+        <option value="2.0">Aumento de 2,0m</option>
+      </select>
+      
+      <button id="info-button">Informações</button>
+    </div>
+    
+    <!-- Painel de informações -->
+    <div id="info-panel" class="hidden">
+      <button id="close-info">Fechar</button>
+      <h2>Impactos da Elevação do Nível do Mar</h2>
+      <p id="scenario-info"></p>
+    </div>
+    
+    <!-- Status -->
+    <div id="status">Aguardando...</div>
+  </div>
+</body>
+</html>
